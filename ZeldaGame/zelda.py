@@ -74,7 +74,7 @@ class ZeldaGame(arcade.Window):
 
 
         self.background_music = arcade.load_sound(
-            "cse210-student-team-challenges/final-project/sounds/Apoxode_-_Electric_1.wav"
+            "sounds/Apoxode_-_Electric_1.wav"
         )
 
         # Play the background music and schedule the loop
@@ -128,26 +128,26 @@ class ZeldaGame(arcade.Window):
         if symbol == arcade.key.UP:
             self.shoot_direction = 'top'
             # self.move_up_sound.play()
-            missile = Weapon("cse210-student-team-challenges/final-project/images/arrow_top.png", SCALING)
+            missile = Weapon("images/arrow_top.png", SCALING)
             shoot = Shooter(ShootUp())
             shoot.do_shoot(self.player, missile, self.missile_list, self.all_sprites)
             
         elif  symbol == arcade.key.LEFT:
             self.shoot_direction = 'left'
-            missile = Weapon("cse210-student-team-challenges/final-project/images/arrow_left.png", SCALING)
+            missile = Weapon("images/arrow_left.png", SCALING)
             shoot = Shooter(ShootLeft())
             shoot.do_shoot(self.player, missile, self.missile_list, self.all_sprites)
             
         elif symbol == arcade.key.DOWN:
             self.shoot_direction = 'down'
             # self.move_down_sound.play()
-            missile = Weapon("cse210-student-team-challenges/final-project/images/arrow_down.png", SCALING)
+            missile = Weapon("images/arrow_down.png", SCALING)
             shoot = Shooter(ShootDown())
             shoot.do_shoot(self.player, missile, self.missile_list, self.all_sprites)
             
         elif  symbol == arcade.key.RIGHT:
             self.shoot_direction = 'right'
-            missile = Weapon("cse210-student-team-challenges/final-project/images/arrow_right.png", SCALING)
+            missile = Weapon("images/arrow_right.png", SCALING)
             shoot = Shooter(ShootRight())
             shoot.do_shoot(self.player, missile, self.missile_list, self.all_sprites)
                   
@@ -193,16 +193,16 @@ class ZeldaGame(arcade.Window):
                 if i.shoot:
                     new_shoot = i.enemy_shoot()
                     if 'ShootDown' in str(new_shoot._Shooter__weapon):
-                        missile = Weapon("cse210-student-team-challenges/final-project/images/fire_down.png", SCALING)
+                        missile = Weapon("images/fire_down.png", SCALING)
                         new_shoot.do_shoot(i, missile, self.missile_enemy, self.all_sprites)
                     if 'ShootUp' in str(new_shoot._Shooter__weapon):
-                        missile = Weapon("cse210-student-team-challenges/final-project/images/fire_top.png", SCALING)
+                        missile = Weapon("images/fire_top.png", SCALING)
                         new_shoot.do_shoot(i, missile, self.missile_enemy, self.all_sprites)
                     if 'ShootRight' in str(new_shoot._Shooter__weapon):
-                        missile = Weapon("cse210-student-team-challenges/final-project/images/fire_right.png", SCALING)
+                        missile = Weapon("images/fire_right.png", SCALING)
                         new_shoot.do_shoot(i, missile, self.missile_enemy, self.all_sprites)
                     if 'ShootLeft' in str(new_shoot._Shooter__weapon):
-                        missile = Weapon("cse210-student-team-challenges/final-project/images/fire_left.png", SCALING)
+                        missile = Weapon("images/fire_left.png", SCALING)
                         new_shoot.do_shoot(i, missile, self.missile_enemy, self.all_sprites) 
 
 
@@ -269,7 +269,7 @@ class ZeldaGame(arcade.Window):
         try:
             
             if not self.start_game:
-                instructions = arcade.load_texture("cse210-student-team-challenges/final-project/images/instructions.png")
+                instructions = arcade.load_texture("images/instructions.png")
                 arcade.draw_lrwh_rectangle_textured(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, instructions)
 
             elif self.start_game:

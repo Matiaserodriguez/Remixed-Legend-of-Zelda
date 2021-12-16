@@ -13,13 +13,13 @@ from ZeldaGame.random_obstacles import *
 
 
 def create_weapon(x,y,room):
-    weapon =  arcade.Sprite("cse210-student-team-challenges/final-project/images/arrow.png", SCALING/4)
+    weapon =  arcade.Sprite("images/arrow.png", SCALING/4)
     weapon.center_x = x
     weapon.center_y = y
     room.list_of_weapons.append(weapon)
 
 def create_health(x,y,room):
-    health_box =  arcade.Sprite("cse210-student-team-challenges/final-project/images/box_health.png", SCALING/4)
+    health_box =  arcade.Sprite("images/box_health.png", SCALING/4)
     health_box.center_x = x
     health_box.center_y = y
     room.list_of_health_box.append(health_box)
@@ -37,7 +37,7 @@ def create_enemy(room, enemy_path, velocity, up_down_around, health):
 
 # Room 1
 # rrooms = [Room()]
-rrooms = [Room(f"cse210-student-team-challenges/final-project/images/room{i%10+1}.png") for i in range(10)]
+rrooms = [Room(f"images/room{i%10+1}.png") for i in range(10)]
 room1 = rrooms[0]
 room1.add_multiple_sprites(path_blue_boxes, little_boxes_right)
 room1.add_multiple_sprites(path_blue_boxes, little_boxes_bottom)

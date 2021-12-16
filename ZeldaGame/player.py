@@ -6,16 +6,16 @@ class Player(arcade.Sprite):
 
         #images
         #front run image
-        texture = arcade.load_texture("cse210-student-team-challenges/final-project/images/front_run1.png")
+        texture = arcade.load_texture("images/front_run1.png")
         self.textures.append(texture)
         #back run changes
-        texture = arcade.load_texture("cse210-student-team-challenges/final-project/images/back_run1.png")
+        texture = arcade.load_texture("images/back_run1.png")
         self.textures.append(texture)
         #right run image
-        texture = arcade.load_texture("cse210-student-team-challenges/final-project/images/right_run1.png")
+        texture = arcade.load_texture("images/right_run1.png")
         self.textures.append(texture)
         #left run image
-        texture = arcade.load_texture("cse210-student-team-challenges/final-project/images/left_run1.png")
+        texture = arcade.load_texture("images/left_run1.png")
         self.textures.append(texture)
 
         #By default, face front
